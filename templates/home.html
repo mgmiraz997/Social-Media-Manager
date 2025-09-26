@@ -1,10 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>front Page</title>
+    <title>{% block title %}SocialHub{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-<h1>This is Home</h1>
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+        <!-- Main Content -->
+        <main class="main-content">
+            {% block content %}
+            <!-- Page specific content will be injected here -->
+            {% endblock %}
+        </main>
+    </div>
 </body>
 </html>
