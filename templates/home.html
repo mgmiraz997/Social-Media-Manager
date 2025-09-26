@@ -1,10 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>front Page</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Black Walking Cat (Forward)</title>
+  <style>
+    body{
+      margin:0;
+      height:100vh;
+      background:linear-gradient(180deg,#cceeff,#a0d8ef 60%);
+      display:flex;
+      align-items:flex-end;
+      justify-content:center;
+      overflow:hidden;
+    }
+    .ground{position:absolute;bottom:0;left:0;right:0;height:160px;background:linear-gradient(180deg,#cfe8d6,#9fd08f)}
+
+    .cat{
+      position:relative;
+      bottom:160px;
+      width:220px;
+      height:140px;
+      transform:scaleX(1); /* forward direction */
+      animation: bob 0.6s ease-in-out infinite;
+    }
+    @keyframes bob{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+
+    .shadow{position:absolute;bottom:145px;left:50%;width:140px;height:22px;background:radial-gradient(ellipse at center, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.02) 70%);border-radius:50%;transform:translateX(-50%);filter:blur(2px)}
+
+    .body{position:absolute;left:40px;top:40px;width:140px;height:70px;background:#0b0b0b;border-radius:40px/30px;border:3px solid #111}
+    .head{position:absolute;left:0;top:10px;width:72px;height:72px;background:#0b0b0b;border-radius:50%;border:3px solid #111;}
+    .ear{position:absolute;top:-6px;width:18px;height:24px;background:#0b0b0b;border:3px solid #111;clip-path:polygon(50% 0,0 100%,100% 100%)}
+    .ear.left{left:8px}
+    .ear.right{right:8px}
+    .eye{position:absolute;top:26px;width:8px;height:12px;background:#ffd86b;border-radius:50%}
+    .eye.left{left:20px}
+    .eye.right{right:20px}
+    .nose{position:absolute;bottom:18px;left:50%;width:6px;height:6px;background:#d86b6b;border-radius:50%;transform:translateX(-50%)}
+
+    .whisker{position:absolute;height:2px;width:34px;background:#333;top:44px}
+    .whisker.left{left:-34px}
+    .whisker.right{right:-34px}
+    .whisker:before,.whisker:after{content:'';position:absolute;height:2px;width:34px;background:#333}
+    .whisker:before{transform:translateY(-8px)}
+    .whisker:after{transform:translateY(8px)}
+
+    .tail{position:absolute;right:-28px;top:18px;width:90px;height:18px;background:#0b0b0b;border-radius:18px;border:3px solid #111;transform-origin:12px 9px;animation:tail-sway 0.9s ease-in-out infinite}
+    @keyframes tail-sway{0%{transform:rotate(22deg)}50%{transform:rotate(-18deg)}100%{transform:rotate(22deg)}}
+
+    .leg{position:absolute;bottom:-12px;width:18px;height:40px;background:#111;border-radius:8px;transform-origin:50% 0}
+    .leg.front-left{left:60px;animation:legA 0.6s ease-in-out infinite}
+    .leg.front-right{left:100px;animation:legB 0.6s ease-in-out infinite}
+    .leg.back-left{left:30px;animation:legB 0.6s ease-in-out infinite}
+    .leg.back-right{left:130px;animation:legA 0.6s ease-in-out infinite}
+    @keyframes legA{0%{transform:rotate(22deg)}50%{transform:rotate(-22deg)}100%{transform:rotate(22deg)}}
+    @keyframes legB{0%{transform:rotate(-18deg)}50%{transform:rotate(18deg)}100%{transform:rotate(-18deg)}}
+  </style>
 </head>
 <body>
-<h1>This is Home</h1>
+  <div class="ground"></div>
+  <div class="shadow"></div>
+  <div class="cat">
+    <div class="head">
+      <div class="ear left"></div>
+      <div class="ear right"></div>
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="nose"></div>
+      <div class="whisker left"></div>
+      <div class="whisker right"></div>
+    </div>
+    <div class="body"></div>
+    <div class="tail"></div>
+    <div class="leg back-left leg"></div>
+    <div class="leg front-left leg"></div>
+    <div class="leg front-right leg"></div>
+    <div class="leg back-right leg"></div>
+  </div>
 </body>
 </html>
