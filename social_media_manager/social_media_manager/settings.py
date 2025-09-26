@@ -55,7 +55,7 @@ ROOT_URLCONF = 'social_media_manager.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-         'DIRS': [BASE_DIR.parent / 'templates'],
+        'DIRS': [BASE_DIR.parent / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -66,7 +66,8 @@ TEMPLATES = [
         },
     },
 ]
-
+TEMPLATES[0]['DIRS'] = [BASE_DIR.parent / 'templates']
+STATICFILES_DIRS = [BASE_DIR.parent / 'static']
 WSGI_APPLICATION = 'social_media_manager.wsgi.application'
 
 

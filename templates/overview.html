@@ -1,0 +1,122 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block content %}
+<div class="app">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo"></div>
+      <span>SocialHub</span>
+    </div>
+
+    <nav class="menu">
+      <a class="menu-item active" href="#">
+        <span class="mi icon-home"></span> Overview
+      </a>
+      <a class="menu-item" href="#"><span class="mi icon-calendar"></span> Calendar</a>
+      <a class="menu-item" href="#"><span class="mi icon-compose"></span> Compose</a>
+      <a class="menu-item" href="#"><span class="mi icon-analytics"></span> Analytics</a>
+      <a class="menu-item" href="#"><span class="mi icon-accounts"></span> Accounts</a>
+      <a class="menu-item" href="#"><span class="mi icon-team"></span> Team</a>
+      <a class="menu-item" href="#"><span class="mi icon-inbox"></span> Inbox</a>
+      <a class="menu-item" href="#"><span class="mi icon-settings"></span> Settings</a>
+    </nav>
+
+    <div class="user-mini">
+      <div class="avatar">MH</div>
+      <div>
+        <div class="u-name">MAHARA</div>
+        <div class="u-role">Admin</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+    <header class="page-head">
+      <h1>Overview</h1>
+      <p>Welcome back! Here's what's happening with your social media</p>
+    </header>
+
+    <!-- Top cards -->
+    <section class="cards">
+      <div class="card">
+        <div class="card-title">Total followers</div>
+        <div class="big-number">45,231</div>
+        <div class="tiny green">▲ +12% From last Month</div>
+        <button class="ghost-btn" aria-label="more"></button>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Engagement Rate</div>
+        <div class="big-number">3.2%</div>
+        <div class="tiny green">▲ 0.5% from last month</div>
+        <button class="ghost-btn" aria-label="more"></button>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Posts This month</div>
+        <div class="big-number">28</div>
+        <div class="tiny red">▼ -3 from last month</div>
+        <button class="ghost-btn" aria-label="calendar"></button>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Reach</div>
+        <div class="big-number">12.4k</div>
+        <div class="tiny green">▲ 8% from last month</div>
+        <button class="ghost-btn" aria-label="chart"></button>
+      </div>
+    </section>
+
+    <!-- Middle: connected + recent -->
+    <section class="two-col">
+      <div class="panel">
+        <div class="panel-head">Connected Accounts</div>
+        <ul class="accounts">
+          <li><span class="ico ig"> </span> Instagram <span class="dim">18.5K followers</span> <span class="badge badge-dark">Connected</span></li>
+          <li><span class="ico fb"> </span> Facebook  <span class="dim">12.3K followers</span> <span class="badge badge-dark">Connected</span></li>
+          <li><span class="ico tw"> </span> Twitter   <span class="dim">8.9K followers</span>  <span class="badge badge-dark">Connected</span></li>
+          <li><span class="ico li"> </span> LinkedIn  <span class="dim">5.4K followers</span>  <span class="badge badge-dark">Connected</span></li>
+          <li><span class="ico tt"> </span> Tik Tok   <span class="dim">2.1K followers</span>  <span class="badge">Connected</span></li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">Recent Posts</div>
+        <ul class="posts">
+          <li>
+            <span class="pill">Instagram</span>
+            <div class="p-title">New product launch announcement!</div>
+            <div class="p-meta">245 likes, 18 comments</div>
+            <div class="time">2 hours ago</div>
+          </li>
+          <li>
+            <span class="pill">Facebook</span>
+            <div class="p-title">Behind the scenes of our latest photoshoot</div>
+            <div class="p-meta">89 likes, 12 comments</div>
+            <div class="time">4 hours ago</div>
+          </li>
+          <li>
+            <span class="pill">Twitter</span>
+            <div class="p-title">Excited to announce our partnership with….</div>
+            <div class="p-meta">156 likes, 23 retweets</div>
+            <div class="time">6 hours ago</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Bottom: quick actions -->
+    <section class="panel">
+      <div class="panel-head">Quick Actions</div>
+      <div class="actions">
+        <button class="btn">Create Post</button>
+        <button class="btn light">Schedule Post</button>
+        <button class="btn light">View Analytics</button>
+      </div>
+    </section>
+  </main>
+</div>
+{% endblock %}
