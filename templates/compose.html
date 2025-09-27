@@ -1,10 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "home.html" %}
+{% load static %}
 
-</body>
-</html>
+{% block content %}
+<div class="compose-container">
+    <h2>Compose Post</h2>
+    <p>Create and schedule posts across all your social media platforms</p>
+
+    <div class="compose-grid">
+        <!-- Left side -->
+        <div class="compose-left">
+
+            <!-- Select Platforms -->
+            <div class="card">
+                <h3>Select Platforms</h3>
+                <div class="platforms">
+                    <label><input type="checkbox"> Instagram</label>
+                    <label><input type="checkbox"> Facebook</label>
+                    <label><input type="checkbox"> Twitter</label>
+                    <label><input type="checkbox"> LinkedIn</label>
+                    <label><input type="checkbox"> Tik Tok</label>
+                </div>
+            </div>
+
+            <!-- Post Content -->
+            <div class="card">
+                <h3>Post Content</h3>
+                <textarea placeholder="What's on your mind?"></textarea>
+                <div class="post-actions">
+                    <button>Add Image</button>
+                    <button>Add Video</button>
+                    <button>Add Link</button>
+                </div>
+                <small>Character limit based on selected platforms (2200 remaining)</small>
+            </div>
+
+            <!-- Schedule Post -->
+            <div class="card">
+                <h3>Schedule Post</h3>
+                <input type="text" placeholder="Post now">
+                <div class="schedule-buttons">
+                    <button class="primary">Post now</button>
+                    <button class="secondary">Save Draft</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right side -->
+        <div class="compose-right">
+            <!-- Preview -->
+            <div class="card">
+                <h3>Preview</h3>
+                <p>Your post content will appear here...</p>
+            </div>
+
+            <!-- Best Times -->
+            <div class="card">
+                <h3>Best Times to post</h3>
+                <ul>
+                    <li>Instagram — <strong>11 AM - 1 PM</strong></li>
+                    <li>Facebook — <strong>9 AM - 10 AM</strong></li>
+                    <li>Twitter — <strong>8 AM - 10 AM</strong></li>
+                    <li>LinkedIn — <strong>7:45 AM - 8:30 AM</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
