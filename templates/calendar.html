@@ -1,0 +1,105 @@
+{% extends "home.html" %}
+{% block title %}Content Calendar · SocialHub{% endblock %}
+
+{% block content %}
+<div class="cal-page">
+  <!-- Page header + action -->
+  <header class="page-head with-action">
+    <div>
+      <h1>Content Calendar</h1>
+      <p>Plan and schedule your social media posts</p>
+    </div>
+    <button class="btn">+ Schedule Post</button>
+  </header>
+
+  <!-- Main calendar (left) + Upcoming (right) -->
+  <section class="panel cal-layout">
+    <!-- LEFT: Calendar grid -->
+    <div class="cal-box">
+      <div class="cal-head">January 2025</div>
+
+      <div class="cal-grid">
+        <!-- Day-of-week -->
+        <div class="dow">Sun</div><div class="dow">Mon</div><div class="dow">Tue</div>
+        <div class="dow">Wed</div><div class="dow">Thu</div><div class="dow">Fri</div><div class="dow">Sat</div>
+
+        {% comment %}
+          Demo days: চাইলে ডাইনামিক ডেটা দেবে। আপাতত 18–31 দেখাচ্ছি।
+        {% endcomment %}
+        {% for i in 18 19 20 21 22 23 24 25 26 27 28 29 30 31 %}
+          <div class="day">
+            <span class="dnum">{{ i }}</span>
+
+            {% if i == 20 %}
+              <div class="event">09:00</div>
+              <div class="event">10:00</div>
+            {% elif i == 21 %}
+              <div class="event">11:20</div>
+            {% elif i == 22 %}
+              <div class="event">18:00</div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- RIGHT: Upcoming posts -->
+    <aside class="upcoming">
+      <h3>Upcoming Post</h3>
+      <ul>
+        <li>
+          <div class="post-row">
+            <span>⏰ Mon, Jan 20 &nbsp; 09:00</span>
+            <span class="badge scheduled">scheduled</span>
+          </div>
+          <div class="post-text">Monday motivation post with team photo</div>
+          <div class="post-icons">Facebook · Instagram</div>
+        </li>
+
+        <li>
+          <div class="post-row">
+            <span>⏰ Mon, Jan 20 &nbsp; 10:00</span>
+            <span class="badge scheduled">scheduled</span>
+          </div>
+          <div class="post-text">Industry news update and our thoughts</div>
+          <div class="post-icons">TikTok</div>
+        </li>
+
+        <li>
+          <div class="post-row">
+            <span>⏰ Tue, Jan 21 &nbsp; 11:20</span>
+            <span class="badge scheduled">scheduled</span>
+          </div>
+          <div class="post-text">Thought leadership article about social media trends</div>
+          <div class="post-icons">Twitter · Facebook</div>
+        </li>
+
+        <li>
+          <div class="post-row">
+            <span>⏰ Wed, Jan 22 &nbsp; 18:00</span>
+            <span class="badge draft">draft</span>
+          </div>
+          <div class="post-text">Behind-the-scenes video content</div>
+          <div class="post-icons">TikTok · Facebook</div>
+        </li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- Bottom stats -->
+  <section class="stats-row">
+    <div class="stat-card">
+      <span>12</span>
+      Posts this week
+    </div>
+    <div class="stat-card">
+      <span>45</span>
+      Posts this month
+    </div>
+    <div class="stat-card">
+      <span>3</span>
+      Draft posts
+    </div>
+  </section>
+</div>
+{% endblock %}
