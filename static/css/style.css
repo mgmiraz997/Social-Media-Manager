@@ -1085,5 +1085,44 @@ html, body {
 }
 .msg .btn:hover{ background:#e5e7eb; }
 
+/* ===========================
+   SETTINGS PAGE
+=========================== */
+.settings-page { display:flex; flex-direction:column; gap:18px; }
+
+.settings-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:18px;
+}
+
+.panel.card{ padding:16px; }
+.panel .card-title{ margin-bottom:10px; }
+
+.panel .row{
+  display:flex; align-items:center; justify-content:space-between;
+  border:1px solid #eee; background:#fff;
+  border-radius:10px; padding:12px 12px; margin-bottom:10px;
+}
+.panel .row-title{ font-weight:500; color:#111827; }
+.panel .actions{ display:flex; gap:8px; }
+
+.btn{
+  padding:8px 12px; border-radius:8px;
+  background:#f3f4f6; border:1px solid #e5e7eb; cursor:pointer;
+  font-size:13px;
+}
+.btn:hover{ background:#e5e7eb; }
+.btn.danger{
+  background:#fee2e2; border-color:#fecaca; color:#991b1b;
+}
+.btn.danger:hover{ background:#fecaca; }
+
+.danger-row{ border-color:#fde2e2; }
+
+/* mobile */
+@media (max-width: 900px){
+  .settings-grid{ grid-template-columns: 1fr; }
+}
 
 

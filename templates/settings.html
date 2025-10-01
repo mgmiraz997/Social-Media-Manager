@@ -1,10 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "home.html" %}
+{% load static %}
 
-</body>
-</html>
+{% block content %}
+<div class="ana-page settings-page">
+
+  <!-- Header -->
+  <header class="page-head">
+    <div>
+      <h1>Settings</h1>
+      <p class="muted">Manage your application preferences and account settings</p>
+    </div>
+  </header>
+
+  <!-- Two-column grid -->
+  <section class="settings-grid">
+
+    <!-- Left: General -->
+    <div class="panel card">
+      <div class="card-title">General Settings</div>
+
+      <div class="row">
+        <div class="row-title">Dark Mode</div>
+        <div class="actions">
+          <button class="btn">Toggle</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row-title">Email Notifications</div>
+        <div class="actions">
+          <button class="btn">Configure</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row-title">Auto-posting</div>
+        <div class="actions">
+          <button class="btn">Settings</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Account -->
+    <div class="panel card">
+      <div class="card-title">Account Settings</div>
+
+      <div class="row">
+        <div class="row-title">Change Password</div>
+        <div class="actions">
+          <button class="btn">Update</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="row-title">Two-Factor Authentication</div>
+        <div class="actions">
+          <button class="btn">Enable</button>
+        </div>
+      </div>
+
+      <div class="row danger-row">
+        <div class="row-title">Delete Account</div>
+        <div class="actions">
+          <button class="btn danger">Delete</button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>
+{% endblock %}
