@@ -1,10 +1,209 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "home.html" %}
+{% load static %}
 
-</body>
-</html>
+{% block content %}
+<div class="ana-page accounts-page">
+
+  <!-- Page Header -->
+  <header class="page-head">
+    <div>
+      <h1>Connected Accounts</h1>
+      <p class="muted">Manage your social media platform connections</p>
+    </div>
+    <button class="btn primary">+ Connect Account</button>
+  </header>
+
+  <!-- Connected Accounts -->
+  <section class="acct-list">
+
+    <!-- Instagram -->
+    <div class="acct-card">
+      <div class="acct-left">
+        <span class="logo-circle ig">I</span>
+        <div>
+          <div class="title">
+            <strong>Instagram</strong>
+            <span class="status active">active</span>
+          </div>
+          <div class="muted">@mycompany • 18.5K followers</div>
+          <div class="tiny muted">Last sync 2 mins ago</div>
+        </div>
+      </div>
+
+      <div class="acct-stats">
+        <div><div class="m-val">28</div><small class="muted">Posts this month</small></div>
+        <div><div class="m-val">3.2%</div><small class="muted">Avg engagement</small></div>
+        <div><div class="m-val">12K</div><small class="muted">Total reach</small></div>
+      </div>
+
+      <div class="acct-actions">
+        <div class="auto">
+          <span class="muted">Auto-posting</span>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <button class="btn light">Settings</button>
+        <button class="btn light">Refresh</button>
+        <button class="btn danger">Disconnect</button>
+      </div>
+    </div>
+
+    <!-- Facebook -->
+    <div class="acct-card">
+      <div class="acct-left">
+        <span class="logo-circle fb">F</span>
+        <div>
+          <div class="title">
+            <strong>Facebook</strong>
+            <span class="status active">active</span>
+          </div>
+          <div class="muted">My Company Page • 12.3K followers</div>
+          <div class="tiny muted">Last sync 5 mins ago</div>
+        </div>
+      </div>
+
+      <div class="acct-stats">
+        <div><div class="m-val">28</div><small class="muted">Posts this month</small></div>
+        <div><div class="m-val">3.2%</div><small class="muted">Avg engagement</small></div>
+        <div><div class="m-val">12K</div><small class="muted">Total reach</small></div>
+      </div>
+
+      <div class="acct-actions">
+        <div class="auto">
+          <span class="muted">Auto-posting</span>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <button class="btn light">Settings</button>
+        <button class="btn light">Refresh</button>
+        <button class="btn danger">Disconnect</button>
+      </div>
+    </div>
+
+    <!-- Twitter (error) -->
+    <div class="acct-card">
+      <div class="acct-left">
+        <span class="logo-circle tw">T</span>
+        <div>
+          <div class="title">
+            <strong>Twitter</strong>
+            <span class="status error">error</span>
+          </div>
+          <div class="muted">@mycompany • 8.9K followers</div>
+          <div class="tiny muted">Last sync 2 hours ago</div>
+        </div>
+      </div>
+
+      <div class="acct-stats">
+        <div><div class="m-val">28</div><small class="muted">Posts this month</small></div>
+        <div><div class="m-val">3.2%</div><small class="muted">Avg engagement</small></div>
+        <div><div class="m-val">12K</div><small class="muted">Total reach</small></div>
+      </div>
+
+      <div class="acct-actions">
+        <div class="auto">
+          <span class="muted">Auto-posting</span>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+        <button class="btn light">Settings</button>
+        <button class="btn light">Refresh</button>
+        <button class="btn danger">Disconnect</button>
+      </div>
+    </div>
+
+    <!-- LinkedIn -->
+    <div class="acct-card">
+      <div class="acct-left">
+        <span class="logo-circle li">L</span>
+        <div>
+          <div class="title">
+            <strong>LinkedIn</strong>
+            <span class="status active">active</span>
+          </div>
+          <div class="muted">My Company • 5.4K followers</div>
+          <div class="tiny muted">Last sync 10 mins ago</div>
+        </div>
+      </div>
+
+      <div class="acct-stats">
+        <div><div class="m-val">28</div><small class="muted">Posts this month</small></div>
+        <div><div class="m-val">3.2%</div><small class="muted">Avg engagement</small></div>
+        <div><div class="m-val">12K</div><small class="muted">Total reach</small></div>
+      </div>
+
+      <div class="acct-actions">
+        <div class="auto">
+          <span class="muted">Auto-posting</span>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <button class="btn light">Settings</button>
+        <button class="btn light">Refresh</button>
+        <button class="btn danger">Disconnect</button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Available Platforms -->
+  <section class="card">
+    <div class="card-title">Available Platforms</div>
+    <div class="plat-grid">
+      <div class="plat">
+        <div class="left">
+          <span class="logo-circle tt">T</span>
+          <div>
+            <div class="p-name">TikTok</div>
+            <div class="tiny muted">Connect your TikTok account to schedule video content</div>
+          </div>
+        </div>
+        <button class="btn primary">Connect</button>
+      </div>
+
+      <div class="plat">
+        <div class="left">
+          <span class="logo-circle yt">Y</span>
+          <div>
+            <div class="p-name">YouTube</div>
+            <div class="tiny muted">Connect your YouTube channel for video management</div>
+          </div>
+        </div>
+        <button class="btn primary">Connect</button>
+      </div>
+
+      <div class="plat">
+        <div class="left">
+          <span class="logo-circle pin">P</span>
+          <div>
+            <div class="p-name">Pinterest</div>
+            <div class="tiny muted">Connect your Pinterest account for visual content</div>
+          </div>
+        </div>
+        <button class="btn primary">Connect</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connection Tips -->
+  <section class="card">
+    <div class="card-title">Connection Tips</div>
+    <ul class="tips">
+      <li>Make sure you have admin access to all accounts you want to connect</li>
+      <li>Some platforms may require additional verification steps</li>
+      <li>You can connect multiple accounts from the same platform</li>
+      <li>All connections use secure OAuth authentication</li>
+      <li>You can disconnect accounts at any time without losing your data</li>
+    </ul>
+  </section>
+
+</div>
+{% endblock %}
