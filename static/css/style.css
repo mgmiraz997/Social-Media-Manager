@@ -1042,6 +1042,48 @@ html, body {
   cursor: pointer;
 }
 .icon-btn:hover { background: #e5e7eb; }
+/* ===========================
+   INBOX PAGE
+=========================== */
+.inbox-page { display:flex; flex-direction:column; gap:20px; }
+
+.inbox-page .page-head{
+  display:flex; align-items:center; justify-content:space-between;
+}
+.inbox-page .page-head h1{ margin:0; font-size:22px; }
+.inbox-page .page-head .muted{ color:#666; font-size:14px; }
+.btn.light{ background:#f3f4f6; border:1px solid #e5e7eb; border-radius:8px; padding:8px 14px; }
+
+/* message list */
+.msg{
+  border:1px solid #eee; background:#fff;
+  border-radius:12px; padding:14px; margin-bottom:12px;
+}
+.msg-top{
+  display:flex; align-items:center; gap:10px; margin-bottom:6px;
+}
+.pill{
+  font-size:12px; padding:2px 8px; border-radius:999px;
+  border:1px solid #e5e7eb; background:#f9fafb; font-weight:500;
+}
+.pill.ig{ background:#fde7f0; color:#b3125a; }
+.pill.fb{ background:#e7f0ff; color:#1d4ed8; }
+.pill.tw{ background:#e6f6ff; color:#0369a1; }
+.author{ font-weight:600; }
+.badge-blue{ color:#3b82f6; font-size:10px; margin-left:4px; }
+.dot{
+  width:4px; height:4px; border-radius:50%; background:#cbd5e1; display:inline-block;
+}
+.when{ margin-left:2px; }
+.tiny{ font-size:12px; }
+
+.msg .txt{ margin:8px 0 10px; color:#1f2937; }
+.msg .actions{ display:flex; gap:8px; }
+.msg .btn{
+  padding:6px 10px; font-size:13px; border-radius:8px;
+  background:#f3f4f6; border:1px solid #e5e7eb; cursor:pointer;
+}
+.msg .btn:hover{ background:#e5e7eb; }
 
 
 

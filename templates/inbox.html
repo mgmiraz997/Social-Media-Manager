@@ -1,10 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "home.html" %}
+{% load static %}
 
-</body>
-</html>
+{% block content %}
+<div class="ana-page inbox-page">
+
+  <!-- Header -->
+  <header class="page-head">
+    <div>
+      <h1>Social Inbox</h1>
+      <p class="muted">Manage all your social media messages in one place</p>
+    </div>
+    <button class="btn light" aria-label="Mark all as read">Mark All Read</button>
+  </header>
+
+  <!-- Messages -->
+  <section class="card">
+    <div class="card-title">Recent Messages</div>
+
+    <!-- Message Row -->
+    <article class="msg">
+      <div class="msg-top">
+        <div class="pill ig">Instagram</div>
+        <div class="author">@user123</div>
+        <span class="dot"></span>
+        <time class="when muted tiny">2 mins ago</time>
+      </div>
+      <p class="txt">Love your latest post!</p>
+      <div class="actions">
+        <button class="btn">Reply</button>
+        <button class="btn">Like</button>
+      </div>
+    </article>
+
+    <article class="msg">
+      <div class="msg-top">
+        <div class="pill fb">Facebook</div>
+        <div class="author">Jane Doe <span class="badge-blue" title="verified">●</span></div>
+        <span class="dot"></span>
+        <time class="when muted tiny">15 mins ago</time>
+      </div>
+      <p class="txt">When will the new product be available?</p>
+      <div class="actions">
+        <button class="btn">Reply</button>
+        <button class="btn">Like</button>
+      </div>
+    </article>
+
+    <article class="msg">
+      <div class="msg-top">
+        <div class="pill tw">Twitter</div>
+        <div class="author">@follower</div>
+        <span class="dot"></span>
+        <time class="when muted tiny">1 hour ago</time>
+      </div>
+      <p class="txt">Great insights in your thread!</p>
+      <div class="actions">
+        <button class="btn">Reply</button>
+        <button class="btn">Like</button>
+      </div>
+    </article>
+
+  </section>
+</div>
+{% endblock %}
