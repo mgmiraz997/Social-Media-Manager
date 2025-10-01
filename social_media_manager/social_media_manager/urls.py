@@ -13,10 +13,10 @@ urlpatterns = [
     path('overview/', views.overview, name='overview'),
     path('calendar/', views.calendar, name='calendar'),
     path('compose/', views.compose, name='compose'),
-    path('analytics/', views.compose, name='analytics'),
-    path('accounts/', views.compose, name='accounts'),
-    path('inbox/', views.compose, name='inbox'),
-    path('team/', views.compose, name='team'),
-    path('settings/', views.compose, name='settings'),
+    path('analytics/', views.analytics, name='analytics'),
+    path('accounts/', views.accounts, name='accounts'),
+    path('inbox/', views.inbox, name='inbox'),
+    path('team/', views.team, name='team'),
+    path('settings/', views.settings, name='settings'),
 
 ]
