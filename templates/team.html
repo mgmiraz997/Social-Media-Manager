@@ -1,10 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "home.html" %}
+{% load static %}
 
-</body>
-</html>
+{% block content %}
+<div class="ana-page team-page">
+
+  <!-- Header -->
+  <header class="page-head">
+    <div>
+      <h1>Team Management</h1>
+      <p class="muted">Manage your team members and their permissions</p>
+    </div>
+    <button class="btn primary">Invite Member</button>
+  </header>
+
+  <!-- Team members list -->
+  <section class="card team-card">
+    <div class="card-title">Team Members</div>
+
+    <!-- Member row -->
+    <div class="member-row">
+      <div class="info">
+        <div class="avatar">JD</div>
+        <div>
+          <div class="name">John Doe</div>
+          <div class="muted tiny">john@company.com</div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="chip role admin">Admin</span>
+        <span class="chip state active">active</span>
+        <button class="icon-btn" aria-label="Settings">⚙</button>
+      </div>
+    </div>
+
+    <div class="member-row">
+      <div class="info">
+        <div class="avatar">SS</div>
+        <div>
+          <div class="name">Sarah Smith</div>
+          <div class="muted tiny">sarah@company.com</div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="chip role manager">Manager</span>
+        <span class="chip state active">active</span>
+        <button class="icon-btn" aria-label="Settings">⚙</button>
+      </div>
+    </div>
+
+    <div class="member-row">
+      <div class="info">
+        <div class="avatar">MJ</div>
+        <div>
+          <div class="name">Mike Johnson</div>
+          <div class="muted tiny">mike@company.com</div>
+        </div>
+      </div>
+      <div class="badges">
+        <span class="chip role creator">Content Creator</span>
+        <span class="chip state pending">pending</span>
+        <button class="icon-btn" aria-label="Settings">⚙</button>
+      </div>
+    </div>
+
+  </section>
+</div>
+{% endblock %}
